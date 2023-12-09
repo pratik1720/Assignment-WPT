@@ -1,0 +1,37 @@
+<html>
+    <header>
+     <script>
+         function birthday(){
+        let d=document.getElementById("d").value;
+        let y=document.getElementById("y").value;
+        let m=document.getElementById("m").value;
+          let b=new Date(y,m,d)
+        let today=new Date();
+        let diff=today-b;
+      diff=today.getFullYear()-diff/(1000*60*60*24*365)
+      if(diff<2000){
+        document.getElementById("holiday").innerHTML="<b> BirthDay is gone..."
+      }
+      else{
+        document.getElementById("holiday").innerHTML="<b> BirthDay is to come..."
+      }
+      console.log(diff)
+    }
+      
+    //   console.log(today);
+    //   let d=new Date(2023,11,12);
+    //   console.log(today.getDay() +" "+ today.getMonth() +" " + today.getFullYear())
+    //   console.log(d.getDay() +" "+ d.getMonth() +" " + d.getFullYear())
+    //   let bir=new Date(2000,7,17);
+     
+      
+     </script>
+    </header>
+    <body>
+        Enter BirthYear <input type="number" id="y" > 
+        Enter BirthMonth<input type="number" id="m" > 
+        Enter BirthDate <input type="number" id="d" > 
+        <button onclick="birthday()">GetDate</button>
+        <p id="holiday"></p>
+    </body>
+</html>

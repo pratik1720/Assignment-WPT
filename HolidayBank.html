@@ -1,0 +1,31 @@
+<html>
+    <header>
+      <script>
+         var c=0;
+       function holiday(){
+        let d=document.getElementById("d").value;
+        let darr=d.split("-");
+        let currD=new Date(darr[0],darr[1],darr[2])
+       
+       if(currD.getDay()==2){
+        c=c+1;
+       if(c==2 || c==4 ){
+        document.getElementById("holiday").innerHTML="<b> Its a holiday and it is a "+c +" Saturday..."  
+        
+       }
+        
+       }
+       if(currD.getDay()==3){
+        document.getElementById("holiday").innerHTML="<b> Its a holiday and it is a Sunday..."
+       }
+        
+
+       }
+      </script>  
+    </header>
+    <body>
+        Enter year <input type="date" id="d" > 
+        <button onclick="holiday()">GetDate</button>
+        <p id="holiday"></p>
+    </body>
+</html>

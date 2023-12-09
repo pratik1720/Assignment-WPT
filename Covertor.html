@@ -1,0 +1,104 @@
+<html>
+    <header>
+        <script>
+           function details(){
+            let sel=parseInt(document.getElementById("op").value);
+             switch(sel){
+                case 1:
+                document.getElementById("getday").innerHTML="<b>  JAN </b>";
+                 break;
+                 case 2:
+                document.getElementById("getday").innerHTML="<b>  FEB </b>";
+                 break;
+                 case 3:
+                document.getElementById("getday").innerHTML="<b> MAR </b>";
+                 break;
+                 case 4:
+                document.getElementById("getday").innerHTML="<b> APR </b>";
+                 break;
+                 case 5:
+                document.getElementById("getday").innerHTML="<b>  MAY</b>";
+                 break;
+                 case 6:
+                document.getElementById("getday").innerHTML="<b>  JUNE </b>";
+                 break;
+                 case 7:
+                document.getElementById("getday").innerHTML="<b>  JULY</b>";
+                 break;
+                 case 8:
+                document.getElementById("getday").innerHTML="<b>  AUG</b>";
+                 break;
+                 case 9:
+                document.getElementById("getday").innerHTML="<b>  SEPT </b>";
+                 break;
+                 case 10:
+                document.getElementById("getday").innerHTML="<b>  OCT </b>";
+                 break;
+                 case 11:
+                document.getElementById("getday").innerHTML="<b> NOV </b>";
+                 break;
+                 case 12:
+                document.getElementById("getday").innerHTML="<b> DEC </b>";
+                 break;
+
+
+             }
+           }
+           function det(){
+            let sel=parseInt(document.getElementById("o").value);
+             switch(sel){
+                case 1:
+                document.getElementById("getd").innerHTML="<b>  MON </b>";
+                 break;
+                 case 2:
+                document.getElementById("getd").innerHTML="<b>  THUE </b>";
+                 break;
+                 case 3:
+                document.getElementById("getd").innerHTML="<b> WENES </b>";
+                 break;
+                 case 4:
+                document.getElementById("getd").innerHTML="<b> THRUS </b>";
+                 break;
+                 case 5:
+                document.getElementById("getd").innerHTML="<b>  FRI</b>";
+                 break;
+                 case 6:
+                document.getElementById("getd").innerHTML="<b>  SAT </b>";
+                 break;
+                 case 7:
+                document.getElementById("getd").innerHTML="<b> SUN</b>";
+             }
+           }
+        </script>
+    </header>
+    <body>
+        <label >Month</label>
+        <select  id="op" onchange="details()">
+          <option >1</option>  
+          <option >2</option>  
+          <option >3</option>  
+          <option >4</option>  
+          <option >5</option>  
+          <option >6</option>  
+          <option >7</option>  
+          <option >8</option>  
+          <option >9</option>  
+          <option >10</option>  
+          <option >11</option>  
+          <option >12</option>  
+        </select>
+        <p id="getday"> </p>
+        <label >Day</label>
+        <select  id="o" onchange="det()">
+          <option >1</option>  
+          <option >2</option>  
+          <option >3</option>  
+          <option >4</option>  
+          <option >5</option>  
+          <option >6</option>  
+          <option >7</option>  
+          
+        </select>
+        <p id="getd"> </p>
+    </body>
+</html>

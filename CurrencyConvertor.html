@@ -1,0 +1,46 @@
+<html>
+    <header>
+        <script>
+          function currencyConversion(){
+            const frcuurency=document.getElementById("frCurrency").value;
+            const tcuurency=document.getElementById("tCurrency").value;
+            const amt=parseInt(document.getElementById("amt").value);
+            const exchangeRates={
+             USD:{INR:83.38},
+             EUR:{INR:89.98},
+             GBP:{INR:104.92}
+            }
+            if(!exchangeRates[frcuurency] ||
+            !exchangeRates[frcuurency][tcuurency]
+            ){
+                alert("Invalid currency selection..")
+                return
+            }
+            const convertedamt=amt*exchangeRates[frcuurency][tcuurency];
+            document.getElementById("res").innerHTML="<b>" +convertedamt;
+          }
+        </script>
+    </header>
+    <body>
+        <label for="currency">From currency</label>
+        <select id="frCurrency">
+            <option value="EUR">Euro</option>
+            <option value="GBP">Pound</option>
+            <option value="USD">Dollar</option>
+            <option value="INR">Rupee</option>
+           
+        </select>
+        <label for="amt">Amount</label>
+        <input type="number" id="amt" placeholder="Enter the amount">
+        <label for="tcurrency">Tocurrency</label>
+        <select id="tCurrency">
+            <option value="EUR">Euro</option>
+            <option value="GBP">Pound</option>
+            <option value="USD">Dollar</option>
+            <option value="INR">Rupee</option>
+           
+        </select>
+        <button onclick="currencyConversion()">Convert</button>
+        <p id="res"></p>
+    </body>
+</html>

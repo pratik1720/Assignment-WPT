@@ -1,0 +1,37 @@
+<html>
+    <header>
+        <script>
+          function nameFormat(g){
+            let c;
+            let last=document.getElementById("last").value;
+            let first=document.getElementById("first").value;
+            let titleLast=  last.substring(0,1).toUpperCase() + last.substring(1,last.length);
+            let titleFirst=  first.substring(0,1).toUpperCase() + first.substring(1,last.length);
+           if(g=="Male"){
+            c=1;
+           }
+           else{
+            c=2;
+           }
+           switch(c){
+            case 1: 
+                 document.getElementById("format").innerHTML="<b>Mr " +titleLast + " "+ titleFirst +"</b>"
+                break;
+                case 2: 
+                 document.getElementById("format").innerHTML="<b>Madam " +titleLast + " "+ titleFirst +"</b>"
+                break;
+           }
+          }
+        </script>
+    </header>
+    <body>
+    <label >Enter the FirstName :</label>
+    <input type="text" id="first">
+    <label >Enter the LastName :</label>
+    <input type="text" id="last">
+    <label for="gender">Gender :</label>
+     Male <input type="radio" onclick="nameFormat('Male')" name="gender" >
+    Female <input type="radio" onclick="nameFormat('Female')" name="gender">
+    <p id="format"></p>
+    </body>
+</html>
