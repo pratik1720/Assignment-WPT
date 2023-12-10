@@ -1,0 +1,23 @@
+<html>
+    <header>
+        <script>
+          function validate(){
+            let n=document.getElementById("name").value
+            n.trim();
+           if(n.length==10){
+            alert("You have enter the correct length name")
+           }
+           else{
+            alert("You have mismatch the length plzz reenter the name")
+           }
+        }
+        </script>
+    </header>
+    <body>
+        
+        <form action="">
+            Name:<input type="text" id="name" >
+            <button type="submit" onclick="validate()">Submit</button>
+        </form>
+    </body>
+</html>
