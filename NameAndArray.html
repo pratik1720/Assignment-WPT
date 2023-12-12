@@ -1,0 +1,23 @@
+<html>
+    <header>
+        <script>
+            var arr=[];
+          function addinlist(){
+            arr.push(document.getElementById("in").value);
+            for(let i=0;i<arr.length;i++){
+               document.getElementById("list"+""+i).innerHTML= arr[i] 
+            }
+          }
+        </script>
+    </header>
+    <body>
+        <input type="text" id="in" >
+        <button onclick="addinlist()">Add</button>
+        <ol >
+            <li id="list0"></li>
+            <li id="list1"></li>
+            <li id="list2"></li>
+            <li id="list3"></li>
+        </ol>
+    </body>
+</html>
