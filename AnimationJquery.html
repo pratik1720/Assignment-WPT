@@ -1,0 +1,26 @@
+<html>
+    <header>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"
+         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous">
+        
+        </script>
+    </header>
+    <script>
+        $().ready(()=>{
+            $(":button").click(()=>{
+                $("#1").animate({left:'450px'})
+            })
+            let div=$('#1');
+            div.animate({height:"500px",opacity:"0.6"},"slow")
+            div.animate({width:"300px",opacity:"0.2"},"slow")
+            div.animate({height:"200px",opacity:"0.9"},"slow")
+            div.animate({height:"100px",opacity:"0.5"},"slow")
+        })
+    </script>
+    <body>
+      <div id="1" style="position: absolute; border: 5px; height: 20px; 
+      width: 20px; background-color: blueviolet; ">
+       <p><input type="button" value="start Moving"></p>
+      </div>    
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <header>
+        <script>
+            var intervalId;
+            var cnt=0;
+         function start(){
+          intervalId= setInterval(()=>{
+            cnt++;
+            document.getElementById("p1").innerHTML=`<b> ${cnt} </b>`
+          },1000)
+         }
+
+         function stop(){
+          clearInterval(intervalId)
+         }
+
+         function clr(){
+            clearInterval(intervalId)
+           
+            cnt=0;
+            document.getElementById("p1").innerHTML=`<b> ${cnt} </b>`
+         }
+        </script>
+
+    </header>
+    <body>
+        <p ><input type="button" value="start" onclick="start()"> </p>
+        <p id="p1">0</p>
+        <p><input type="button" value="stop" onclick="stop()"></p>
+        <p><input type="button" value="clear" onclick="clr()"></p>
+    </body>
+</html>

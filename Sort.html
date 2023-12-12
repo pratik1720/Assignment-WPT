@@ -1,0 +1,25 @@
+<html>
+    <header>
+        <script>
+            var arr=[]
+          function add(){
+            let e=parseInt(document.getElementById("i").value);
+              arr.push(e)
+             
+          }
+          function sort1(){
+            arr.sort()
+           
+            arr.forEach((ele)=>{
+                document.getElementById("s").innerHTML+=ele +" "
+            })
+          }
+        </script>
+    </header>
+    <body>
+        
+      <textarea name="" id="i" cols="30" rows="3" onblur="add()"></textarea>
+       <button onclick="sort1()" >Radio</button>
+       <p id="s"></p>
+    </body>
+</html>
